@@ -1,0 +1,44 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+.env
+.env.*
+
+# Large datasets and model weights
+All_to_Sept/
+input_data/
+raw/
+backtest/
+current_directory/
+HFfMODELsept10test/
+HFfMODELsept10test_dollarvol*/
+model_exp/
+models/
+models_s4/
+othermodels/
+playround_models/
+tmp/
+
+# Serialized artifacts
+*.pkl
+*.pt
+*.pth
+*.npz
+*.npy
+*.db
+*.ndjson
+
+# OS artifacts
+.DS_Store
+._*
+
+# Logs and scratch
+*.log
+*.tmp
