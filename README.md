@@ -1,4 +1,4 @@
-Trans4Trade — Transformer + State‑Space Time‑Series Toolkit
+Trans4trade Codebase(cleaned)
 
 > 📄 **Paper:** The Trans4Trade manuscript lives at `docs/papers/trans4.pdf`. Start there if you need the research narrative or citation details.
 
