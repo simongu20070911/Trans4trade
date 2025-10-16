@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trans4trade"
+version = "0.1.0"
+description = "Research toolkit for transformer + state-space order book modeling"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["trans4trade*", "models_s4*"]
+exclude = ["tests*", "__pycache__*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+exclude = [
+  "^\.git/",
+  "^\.venv/",
+  "^venv/",
+  "^data/",
+  "^artifacts/",
+  "^experiments/",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+known_first_party = ["trans4trade", "models_s4"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+extend-exclude = [
+  ".venv",
+  "venv",
+  "data",
+  "artifacts",
+  "experiments",
+  "__pycache__",
+]
+select = ["E", "F", "I", "B", "UP"]
+ignore = [
+  # Many research scripts and notebooks may exceed the standard line length
+  "E501",
+]
+per-file-ignores = {
+  # Allow unused imports in __init__.py for namespace exposure
+  "**/__init__.py" = ["F401"],
+}

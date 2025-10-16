@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# Make Jupyter notebook diffs quieter
+*.ipynb -diff
+
+# Shell scripts
+*.sh text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+

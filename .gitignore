@@ -11,20 +11,13 @@ venv/
 .env
 .env.*
 
-# Large datasets and model weights
-All_to_Sept/
-input_data/
-raw/
-backtest/
-current_directory/
-HFfMODELsept10test/
-HFfMODELsept10test_dollarvol*/
-model_exp/
-models/
-models_s4/
-othermodels/
-playround_models/
-tmp/
+# Data directories
+data/*
+!data/README.md
+
+# Artifacts and outputs
+artifacts/*
+!artifacts/README.md
 
 # Serialized artifacts
 *.pkl
@@ -34,6 +27,8 @@ tmp/
 *.npy
 *.db
 *.ndjson
+*.onnx
+*.joblib
 
 # OS artifacts
 .DS_Store
@@ -42,3 +37,19 @@ tmp/
 # Logs and scratch
 *.log
 *.tmp
+
+# Python & tooling
+.python-version
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.benchmarks/
+site/
+dist/
+build/
+*.egg-info/
+
+# Env files
+.env
+.env.*
+*.env
